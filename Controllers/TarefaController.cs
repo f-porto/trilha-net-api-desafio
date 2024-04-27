@@ -80,7 +80,7 @@ public class TarefaController : ControllerBase
         tarefaBanco.Titulo = tarefa.Titulo;
         _context.Update(tarefaBanco);
         _context.SaveChanges();
-        return Ok();
+        return Ok(tarefaBanco);
     }
 
     [HttpDelete("{id}")]
